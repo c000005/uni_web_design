@@ -3,6 +3,27 @@ body {
   padding: 0;
   background-color: rgb(139 208 239);
   color: rgb(0 53 70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(139 208 239);
+  height: 100vh;
+}
+
+header {
+  background-color: rgb(139 208 239);
+  color: rgb(0 53 70);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+a {
+  color: rgb(139 208 239);
+  text-decoration: none;
+}
+
+p {
+  color: rgb(0 53 70)
 }
 
 main {
@@ -10,32 +31,158 @@ main {
   text-align: center;
 }
 
-input, textarea, button {
-  padding: 12px;
-  border: solid;
-  border-radius: 8px;
+label {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: rgb(139 208 239);
 }
 
-textarea {
+textarea, input, button {
+  background: rgb(139 208 239);
+  color: rgb(0 53 70);
   padding: 12px;
   border: solid rgb(46 45 77);
   border-radius: 8px;
 }
 
-input, textarea {
+footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
   background: rgb(139 208 239);
   color: rgb(0 53 70);
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: rgb(198 194 234);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: rgb(139 208 239);
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75;
 }
 
 button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
   background: rgb(139 208 239);
   color: rgb(0 53 70);
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
 
-footer {
-  margin-top: 155px;
-  background: #1e1e1e;
-  padding: 15px;
+button:hover {
+  background: #0366d6;
+}
+
+input, select {
+  width: calc(100% - 0.75rem * 2);
+  padding: 0.7rem;
+  margin: 6px 0 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+input[type="email"], input[type="password"] {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: rgb(223 227 231);
+}
+
+input.otp {
+  width: 48px;
+  height: 48px;
   text-align: center;
-  color: #aaa;
+  font-size: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.team-member img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(0 53 70);
+}
+
+.team-member {
+  margin-top: 1rem;
+  color: rgb(0 53 70);
+  text-align: center;
+}
+
+.team-member p {
+  color: rgb(0 53 70);
+  font-size: 1rem;
+}
+
+.small {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: rgb(139 208 239);
+}
+
+.box {
+  background: rgb(0 53 70);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  width: 380px;
+  max-width: 95%;
+}
+
+.container {
+  background: rgb(0 53 70);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  width: 360px;
+  max-width: 95%;
+}
+
+.wrapper {
+  background: rgb(0 53 70);;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  width: 420px;
+  max-width: 95%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.inputs {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  width: 420px;
+  max-width: 95%;
 }
