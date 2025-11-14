@@ -1,6 +1,5 @@
 @import url('dark.css');
 
-/* ---------- Reset & Global ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +16,6 @@ body {
   color: var(--md-sys-color-on-background);
 }
 
-/* ---------- Navbar ---------- */
 .nav-bar {
   position: fixed;
   top: 0;
@@ -47,7 +45,6 @@ body {
   text-shadow: 0 0 8px rgba(189, 233, 255, 0.7);
 }
 
-/* ---------- Hero Section ---------- */
 .hero {
   height: 90vh;
   background: linear-gradient(
@@ -83,7 +80,6 @@ body {
   color: var(--md-sys-color-on-background);
 }
 
-/* ---------- Sections & Containers ---------- */
 section,
 .container,
 .card,
@@ -98,21 +94,18 @@ section,
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
-/* ---------- Headings ---------- */
 h1, h2, h3 {
   text-align: center;
   color: var(--md-sys-color-primary);
   margin-bottom: 1rem;
 }
 
-/* ---------- Paragraphs ---------- */
 p {
   color: var(--md-sys-color-on-background);
   margin-bottom: 1rem;
   text-align: justify;
 }
 
-/* ---------- Forms ---------- */
 form {
   display: flex;
   flex-direction: column;
@@ -133,7 +126,6 @@ button {
   transition: all 0.25s ease;
 }
 
-/* Inputs, Textareas, Selects */
 input,
 textarea,
 select {
@@ -153,7 +145,6 @@ select:focus {
   box-shadow: 0 0 6px rgba(139, 208, 239, 0.4);
 }
 
-/* ---------- Buttons ---------- */
 button,
 .btn {
   padding: 0.9rem 1.2rem;
@@ -176,7 +167,6 @@ button:hover,
   transform: translateY(-2px);
 }
 
-/* ---------- OTP Inputs ---------- */
 .inputs {
   display: flex;
   justify-content: center;
@@ -201,7 +191,6 @@ button:hover,
   background: rgba(27, 32, 35, 0.9);
 }
 
-/* ---------- Games Grid ---------- */
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -227,7 +216,6 @@ button:hover,
   margin-bottom: 1rem;
 }
 
-/* ---------- Links ---------- */
 a {
   text-decoration: none;
   color: var(--md-sys-color-primary);
@@ -238,14 +226,12 @@ a:hover {
   color: var(--md-sys-color-on-primary-container);
 }
 
-/* ---------- Text Small ---------- */
 .small {
   font-size: 0.9rem;
   text-align: center;
   color: var(--md-sys-color-on-surface-variant);
 }
 
-/* ---------- Team Member ---------- */
 .team-member {
   text-align: center;
   margin-top: 1.5rem;
@@ -261,7 +247,6 @@ a:hover {
   box-shadow: 0 0 15px rgba(139, 208, 239, 0.3);
 }
 
-/* ---------- Footer ---------- */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -272,7 +257,6 @@ footer {
   border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
-/* ---------- Auth Pages ---------- */
 .farq {
   display: flex;
   justify-content: center;
@@ -280,7 +264,6 @@ footer {
   height: 100vh;
 }
 
-/* ---------- Misc ---------- */
 .game-detail {
   display: flex;
   flex-wrap: wrap;
