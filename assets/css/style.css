@@ -262,3 +262,10 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid var(--md-sys-color-outline-variant);
 }
+
+.logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
