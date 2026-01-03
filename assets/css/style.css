@@ -810,3 +810,71 @@ m3-fab {
     display: flex;
     gap: 8px;
 }
+
+/* =========================
+   Material 3 Switch
+========================= */
+
+.m3-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--md-sys-color-on-surface);
+}
+
+.m3-switch input {
+    appearance: none;
+    width: 52px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: var(--md-sys-color-surface-variant);
+    position: relative;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Thumb */
+.m3-switch input::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--md-sys-color-outline);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Enabled + Checked */
+.m3-switch input:checked {
+    background-color: var(--md-sys-color-primary);
+}
+
+.m3-switch input:checked::after {
+    transform: translateX(-20px);
+    background-color: var(--md-sys-color-on-primary);
+}
+
+/* Hover */
+.m3-switch input:hover {
+    background-color: var(--md-sys-color-surface-container-high);
+}
+
+/* Focus */
+.m3-switch input:focus-visible {
+    box-shadow: 0 0 0 4px rgba(139,208,239,0.25);
+}
+
+/* Pressed */
+.m3-switch input:active::after {
+    width: 26px;
+}
+
+/* Disabled */
+.m3-switch input:disabled {
+    opacity: 0.38;
+    cursor: default;
+}
