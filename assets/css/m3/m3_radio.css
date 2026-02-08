@@ -1,0 +1,50 @@
+@import url('../color/dark.css');
+
+.m3-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.m3-radio input {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    border: 2px solid var(--md-sys-color-outline);
+    background: transparent;
+
+    display: grid;
+    place-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.m3-radio input::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: var(--md-sys-color-primary);
+    transition: transform 0.15s ease;
+}
+
+.m3-radio input:checked {
+    border-color: var(--md-sys-color-primary);
+}
+
+.m3-radio input:checked::after {
+    transform: scale(1);
+}
+
+.m3-radio input:focus-visible {
+    box-shadow: 0 0 0 4px rgba(139, 208, 239, 0.25);
+}
+
+.m3-radio input:disabled {
+    opacity: 0.38;
+    cursor: default;
+}

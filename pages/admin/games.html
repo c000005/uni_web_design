@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <title>مدیریت بازی‌ها</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
+
 <body>
+
+<header class="header">
+    <nav class="nav-bar">
+        <a href="index.html" class="logo">
+            <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
+        </a>
+        <a href="index.html">خانه</a>
+        <a href="games.html">بازی‌ها</a>
+        <a href="team.html">تیم ما</a>
+        <a href="../auth/login.html">ورود</a>
+        <a href="settings.html">تنظیمات</a>
+        <div>
+            <span id="cart_image">🛒</span>
+            <span id="cart_badge" class="badge large">0</span>
+        </div>
+    </nav>
+</header>
 
 <main class="container">
     <h1>لیست بازی‌ها</h1>
@@ -31,7 +50,7 @@
                 <td>95GB</td>
                 <td>4.8</td>
                 <td><span class="badge success">منتشر شده</span></td>
-                <td class="table-actions">
+                <td>
                     <button class="m3-btn small outlined">ویرایش</button>
                     <button class="m3-btn small text">حذف</button>
                 </td>
@@ -44,7 +63,7 @@
                 <td>70GB</td>
                 <td>4.5</td>
                 <td><span class="badge warning">پیش‌نویس</span></td>
-                <td class="table-actions">
+                <td>
                     <button class="m3-btn small outlined">ویرایش</button>
                     <button class="m3-btn small text">حذف</button>
                 </td>
@@ -54,5 +73,10 @@
     </div>
 </main>
 
+<footer>
+    <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
+</footer>
+
 </body>
+
 </html>

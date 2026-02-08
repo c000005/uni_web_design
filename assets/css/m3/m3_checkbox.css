@@ -1,0 +1,51 @@
+@import url('../color/dark.css');
+
+.m3-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--md-sys-color-on-surface);
+}
+
+.m3-checkbox input {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+
+    border-radius: 4px;
+    border: 2px solid var(--md-sys-color-outline);
+    background-color: transparent;
+
+    display: grid;
+    place-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.m3-checkbox input:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    background-color: var(--md-sys-color-on-primary);
+    transition: transform 0.15s ease;
+}
+
+.m3-checkbox input:checked {
+    background-color: var(--md-sys-color-primary);
+    border-color: var(--md-sys-color-primary);
+}
+
+.m3-checkbox input:checked::after {
+    transform: scale(1);
+}
+
+.m3-checkbox input:focus-visible {
+    box-shadow: 0 0 0 4px var(--md-sys-color-primary);
+}
+
+.m3-checkbox input:disabled {
+    opacity: 0.38;
+    cursor: default;
+}

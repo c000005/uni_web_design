@@ -1,100 +1,107 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فهرست بازی‌ها | GameHub</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فهرست بازی‌ها | GameHub</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
-<section class="container">
-    <h1>بازی‌ها</h1>
 
-    <!-- Filters -->
-    <div class="m3-card filled" style="margin-bottom:16px">
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+    <header class="header">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">
+                <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
+            </a>
+            <a href="index.html">خانه</a>
+            <a href="games.html" class="active">بازی‌ها</a>
+            <a href="team.html">تیم ما</a>
+            <a href="../auth/login.html">ورود</a>
+            <a href="settings.html">تنظیمات</a>
+            <div>
+                <span id="cart_image">🛒</span>
+                <span id="cart_badge" class="badge large">
+          0
+        </span>
+            </div>
+        </nav>
+    </header>
 
-            <input type="search" placeholder="جستجو بازی..." class="m3-text-field">
 
-            <select>
-                <option>همه ژانرها</option>
-                <option>اکشن</option>
-                <option>RPG</option>
-                <option>FPS</option>
-            </select>
+    <section class="container">
+        <h1>بازی‌ها</h1>
 
-            <select>
-                <option>مرتب‌سازی</option>
-                <option>بیشترین امتیاز</option>
-                <option>جدیدترین</option>
-                <option>پرفروش‌ترین</option>
-            </select>
+        <div class="m3-card filled" style="margin-bottom:16px">
+            <div class="games-grid">
+                <input type="search" placeholder="جستجو بازی..." class="m3-text-field">
 
+                <select>
+                    <option>همه ژانرها</option>
+                    <option>اکشن</option>
+                    <option>RPG</option>
+                    <option>FPS</option>
+                </select>
+
+                <select>
+                    <option>مرتب‌سازی</option>
+                    <option>بیشترین امتیاز</option>
+                    <option>جدیدترین</option>
+                    <option>پرفروش‌ترین</option>
+                </select>
+
+            </div>
+
+            <div style="margin-top:12px;display:flex;gap:8px">
+                <a href="#" class="m3-btn small tonal">🔥 پرفروش‌ها</a>
+                <a href="#" class="m3-btn small outlined">🎮 اکشن</a>
+                <a href="#" class="m3-btn small outlined">🧙 RPG</a>
+            </div>
         </div>
 
-        <div style="margin-top:12px;display:flex;gap:8px">
-            <a href="#" class="m3-btn small tonal">🔥 پرفروش‌ها</a>
-            <a href="#" class="m3-btn small outlined">🎮 اکشن</a>
-            <a href="#" class="m3-btn small outlined">🧙 RPG</a>
+        <div class="games-grid">
+            <div class="m3-card elevated">
+                <img src="../../assets/images/gta.jpg">
+                <h3>GTA V</h3>
+                <p class="small">اکشن | 95GB</p>
+                <p>⭐ 4.8</p>
+                <a href="game-detail.html" class="m3-btn small filled">مشاهده جزئیات</a>
+            </div>
+
+            <div class="m3-card elevated">
+                <img src="../../assets/images/cod.jpg">
+                <h3>Call of Duty</h3>
+                <p class="small">FPS | 70GB</p>
+                <p>⭐ 4.5</p>
+                <a href="game-detail.html" class="m3-btn small filled">مشاهده جزئیات</a>
+            </div>
         </div>
-    </div>
+    </section>
 
+    <main class="container">
+        <h1>فهرست بازی‌ها</h1>
+        <section class="games-grid">
+            <article class="game-card">
+                <img src="../../assets/images/gta.jpg" alt="GTA V">
+                <h3>Grand Theft Auto V</h3>
+                <p>اکشن، ماجراجویی</p>
+                <a href="game-detail.html" class="btn btn-primary">مشاهده جزئیات</a>
+            </article>
 
-    <div class="games-grid">
-        <div class="game-card m3-card elevated">
-            <img src="../../assets/images/gta.jpg">
-            <h3>GTA V</h3>
-            <p class="small">اکشن | 95GB</p>
-            <p>⭐ 4.8</p>
-            <a href="game-detail.html" class="m3-btn small filled">مشاهده جزئیات</a>
-        </div>
+            <article class="game-card">
+                <img src="../../assets/images/cod.jpg" alt="Call of Duty">
+                <h3>Call of Duty: Modern Warfare</h3>
+                <p>تیراندازی اول شخص</p>
+                <a href="game-detail.html" class="btn btn-primary">مشاهده جزئیات</a>
+            </article>
+        </section>
+    </main>
 
-        <div class="game-card m3-card elevated">
-            <img src="../../assets/images/cod.jpg">
-            <h3>Call of Duty</h3>
-            <p class="small">FPS | 70GB</p>
-            <p>⭐ 4.5</p>
-            <a href="game-detail.html" class="m3-btn small filled">مشاهده جزئیات</a>
-        </div>
-    </div>
-</section>
-
-<header class="header">
-    <nav class="nav-bar">
-        <a href="index.html" class="logo">
-            <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
-        </a>
-        <a href="index.html">خانه</a>
-        <a href="games.html">بازی‌ها</a>
-        <a href="team.html">تیم ما</a>
-        <a href="../auth/login.html">ورود</a>
-    </nav>
-</header>
-
-
-<main class="container">
-  <h1>فهرست بازی‌ها</h1>
-  <section class="games-grid">
-    <article class="game-card">
-      <img src="../../assets/images/gta.jpg" alt="GTA V">
-      <h3>Grand Theft Auto V</h3>
-      <p>اکشن، ماجراجویی</p>
-      <a href="game-detail.html" class="btn btn-primary">مشاهده جزئیات</a>
-    </article>
-
-    <article class="game-card">
-      <img src="../../assets/images/cod.jpg" alt="Call of Duty">
-      <h3>Call of Duty: Modern Warfare</h3>
-      <p>تیراندازی اول شخص</p>
-      <a href="game-detail.html" class="btn btn-primary">مشاهده جزئیات</a>
-    </article>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 GameHub — مرکز دانلود بازی‌های ویدیویی</p>
-</footer>
+    <footer>
+        <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
+    </footer>
 
 </body>
+
 </html>

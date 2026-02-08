@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>کد یکبار مصرف (OTP) | GameHub</title>
-<link rel="stylesheet" href="../../assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>کد یکبار مصرف (OTP) | GameHub</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body class="farq">
 
-<header class="header">
+<body>
+
+  <header class="header">
     <nav class="nav-bar">
-        <a href="../main/index.html" class="logo">
-            <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
-        </a>
-        <a href="../main/index.html">خانه</a>
-        <a href="../main/games.html">بازی‌ها</a>
-        <a href="../main/team.html">تیم ما</a>
-        <a href="../auth/login.html">ورود</a>
+      <a href="../main/index.html" class="logo">
+        <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
+      </a>
+
+      <a href="../main/index.html">خانه</a>
+      <a href="../main/games.html">بازی‌ها</a>
+      <a href="../main/team.html">تیم ما</a>
+      <a href="login.html">ورود</a>
+      <a href="../main/settings.html">تنظیمات</a>
+      <div>
+        <span id="cart_image">🛒</span>
+        <span id="cart_badge" class="badge large">
+          0
+        </span>
+      </div>
     </nav>
-</header>
+  </header>
 
 
-<main class="container">
-  <h1 id="otp-title">وارد کردن کد یکبار مصرف</h1>
-  <p class="small">کدی که به ایمیل یا تلفن شما ارسال شده را وارد کنید.</p>
+  <main class="container">
+    <h1 id="otp-title">وارد کردن کد یکبار مصرف</h1>
+    <p class="small">کدی که به ایمیل یا تلفن شما ارسال شده را وارد کنید.</p>
 
-  <form action="/auth/verify-otp" method="post" id="otpForm" autocomplete="one-time-code">
-    <div class="inputs" role="group" aria-label="کد ۶ رقمی">
-      <input class="otp" name="otp1" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
-      <input class="otp" name="otp2" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
-      <input class="otp" name="otp3" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
-      <input class="otp" name="otp4" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
-      <input class="otp" name="otp5" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
-      <input class="otp" name="otp6" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
-    </div>
+    <form action="/auth/verify-otp" method="post" id="otpForm" autocomplete="one-time-code">
+      <div class="inputs" role="group" aria-label="کد ۶ رقمی">
+        <input class="otp" name="otp1" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
+        <input class="otp" name="otp2" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
+        <input class="otp" name="otp3" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
+        <input class="otp" name="otp4" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
+        <input class="otp" name="otp5" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
+        <input class="otp" name="otp6" inputmode="numeric" pattern="[0-9]" maxlength="1" required>
+      </div>
 
-    <button type="submit" class="btn btn-primary">تایید کد</button>
-  </form>
+      <button type="submit" class="btn btn-primary">تایید کد</button>
+    </form>
 
-  <p class="small">زمان اعتبار کد: <strong id="timer">02:00</strong></p>
-  <p class="small"><a href="forgot.html">ارسال مجدد کد</a></p>
-</main>
+    <p class="small">زمان اعتبار کد: <strong id="timer">02:00</strong></p>
+    <p class="small"><a href="forgot.html">ارسال مجدد کد</a></p>
+  </main>
+
+  <footer>
+    <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
+  </footer>
 
 </body>
+
 </html>

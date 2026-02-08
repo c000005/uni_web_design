@@ -1,54 +1,69 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>فراموشی رمز عبور | GameHub</title>
-<link rel="stylesheet" href="../../assets/css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>فراموشی رمز عبور | GameHub</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body class="farq">
 
-<header class="header">
-    <nav class="nav-bar">
-        <a href="../main/index.html" class="logo">
-            <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
-        </a>
-        <a href="../main/index.html">خانه</a>
-        <a href="../main/games.html">بازی‌ها</a>
-        <a href="../main/team.html">تیم ما</a>
-        <a href="../auth/login.html">ورود</a>
-    </nav>
-</header>
+<body>
+
+    <header class="header">
+        <nav class="nav-bar">
+            <a href="../main/index.html" class="logo">
+                <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
+            </a>
+
+            <a href="../main/index.html">خانه</a>
+            <a href="../main/games.html">بازی‌ها</a>
+            <a href="../main/team.html">تیم ما</a>
+            <a href="login.html">ورود</a>
+            <a href="../main/settings.html">تنظیمات</a>
+            <div>
+                <span id="cart_image">🛒</span>
+                <span id="cart_badge" class="badge large">
+          0
+        </span>
+            </div>
+        </nav>
+    </header>
 
 
-<main class="container">
-  <h1 id="forgot-title">فراموشی رمز عبور</h1>
-  <p class="small">ایمیل خود را وارد کنید تا لینک یا کد بازیابی رمز برای شما ارسال شود.</p>
+    <main class="container">
+        <h1 id="forgot-title">فراموشی رمز عبور</h1>
+        <p class="small">ایمیل خود را وارد کنید تا لینک یا کد بازیابی رمز برای شما ارسال شود.</p>
 
-  <form action="/auth/forgot-password" method="post" id="forgotForm" novalidate>
-    <div>
-      <label for="email">ایمیل</label>
-      <input id="email" name="email" type="email" required autocomplete="email">
-      <div class="error" id="emailError" aria-live="polite"></div>
-    </div>
-    <button type="submit" class="btn btn-primary">ارسال لینک بازیابی</button>
-  </form>
+        <form action="/auth/forgot-password" method="post" id="forgotForm" novalidate>
+            <div>
+                <label for="email">ایمیل</label>
+                <input id="email" name="email" type="email" required autocomplete="email">
+                <div class="error" id="emailError" aria-live="polite"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">ارسال لینک بازیابی</button>
+        </form>
 
-  <p class="small"><a href="login.html">بازگشت به ورود</a></p>
-</main>
+        <p class="small"><a href="login.html">بازگشت به ورود</a></p>
+    </main>
 
-<script src="../../assets/js/form-validation.js"></script>
-<script>
-    document.getElementById("forgotForm").addEventListener("submit", function (e) {
-        const email = document.getElementById("email");
-        clearError(email);
+    <footer>
+        <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
+    </footer>
 
-        if (!isValidEmail(email.value)) {
-            showError(email, "ایمیل وارد شده معتبر نیست");
-            e.preventDefault();
-        }
-    });
-</script>
+    <script src="../../assets/js/form_validation.js"></script>
+    <script>
+        document.getElementById("forgotForm").addEventListener("submit", function (e) {
+            const email = document.getElementById("email");
+            clearError(email);
+
+            if (!isValidEmail(email.value)) {
+                showError(email, "ایمیل وارد شده معتبر نیست");
+                e.preventDefault();
+            }
+        });
+    </script>
 
 </body>
+
 </html>

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تماس با ما | GameHub</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما | GameHub</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/m3/m3_btn.css">
+    <link rel="stylesheet" href="../../assets/css/m3/m3_textfield.css">
 </head>
+
 <body>
 
 <header class="header">
@@ -17,40 +21,61 @@
         <a href="games.html">بازی‌ها</a>
         <a href="team.html">تیم ما</a>
         <a href="../auth/login.html">ورود</a>
+        <a href="settings.html">تنظیمات</a>
+        <div>
+            <span id="cart_image">🛒</span>
+            <span id="cart_badge" class="badge large">0</span>
+        </div>
     </nav>
 </header>
 
 
-<main class="container contact-form">
-  <h1>تماس با ما</h1>
-  <p>اگر پرسشی دارید یا نیاز به پشتیبانی دارید، فرم زیر را پر کنید. تیم ما در سریع‌ترین زمان پاسخ خواهد داد.</p>
+<main class="container">
+    <h1>تماس با ما</h1>
+    <p class="small">اگر پرسشی دارید یا نیاز به پشتیبانی دارید، فرم زیر را پر کنید. تیم ما در سریع‌ترین زمان پاسخ خواهد
+        داد.</p>
 
-  <form action="#" method="post">
-    <label for="name">نام:</label>
-    <input type="text" id="name" name="name" required>
+    <form id="contact_form" action="#" method="post">
+        <div>
+            <label for="name">نام:</label>
+            <input type="text" id="name" name="name" required>
+            <div id="name_error" class="error"></div>
+        </div>
 
-    <label for="email">ایمیل:</label>
-    <input type="email" id="email" name="email" required>
+        <div>
+            <label for="email">ایمیل:</label>
+            <input type="email" id="email" name="email" required>
+            <div id="email_error" class="error"></div>
+        </div>
 
-    <label for="subject">موضوع:</label>
-    <input type="text" id="subject" name="subject" placeholder="مثلاً: مشکل در دانلود بازی">
+        <div>
+            <label for="subject">موضوع:</label>
+            <input type="text" id="subject" name="subject" placeholder="مثلاً: مشکل در دانلود بازی" required>
+            <div id="subject_error" class="error"></div>
+        </div>
 
-    <label for="message">پیام شما:</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
+        <div>
+            <label for="message">پیام شما:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <div id="message_error" class="error"></div>
+        </div>
 
-    <button type="submit" class="btn btn-primary">ارسال پیام</button>
-  </form>
+        <button type="submit" class="m3-btn filled medium">ارسال پیام</button>
+    </form>
 
-  <section class="contact-info">
-    <h3>اطلاعات تماس</h3>
-    <p>ایمیل: support@gamehub.ir</p>
-    <p>شماره تماس: ۱۲۳۴۵۶۷۸</p>
-  </section>
+    <section>
+        <h3>اطلاعات تماس</h3>
+        <p class="small">ایمیل: support@gamehub.ir</p>
+        <p class="small">شماره تماس: 09134567890</p>
+    </section>
 </main>
 
 <footer>
-  <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
+    <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
 </footer>
 
+<script src="../../assets/js/form_validation.js"></script>
+
 </body>
+
 </html>

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <title>سبد خرید | GameHub</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/m3/m3_btn.css">
 </head>
+
 <body>
 
 <header class="header">
@@ -15,38 +18,34 @@
 
         <a href="index.html">خانه</a>
         <a href="games.html">بازی‌ها</a>
-
-        <!-- Cart Icon + Badge -->
-        <div style="position: relative;">
-            <span style="font-size: 22px;">🛒</span>
-            <span id="cartBadge" class="badge large"
-                  style="position:absolute; top:-6px; right:-10px;">
-                0
-            </span>
+        <a href="team.html">تیم ما</a>
+        <a href="../auth/login.html">ورود</a>
+        <a href="settings.html">تنظیمات</a>
+        <div>
+            <span id="cart_image">🛒</span>
+            <span id="cart_badge" class="badge large">0</span>
         </div>
     </nav>
 </header>
 
 <main class="container">
     <h1>افزودن به سبد خرید</h1>
+    <p class="small">تذکر: قبل از خرید محتوای الحاقی نیاز است بازی را خریداری کرده باشید!</p>
 
-    <button class="m3-btn filled medium" onclick="addToCart()">
-        افزودن بازی ۱
+    <button class="m3-btn filled medium" onclick="add_to_cart()">
+        افزودن بازی
     </button>
 
-    <button class="m3-btn tonal medium" onclick="addToCart()">
-        افزودن بازی ۲
+    <button class="m3-btn tonal medium" onclick="add_to_cart()">
+        افزودن محتوای الحاقی
     </button>
 </main>
 
-<script>
-    let cartCount = 0;
+<footer>
+    <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
+</footer>
 
-    function addToCart() {
-        cartCount++;
-        document.getElementById("cartBadge").textContent = cartCount;
-    }
-</script>
-
+<script src="../../assets/js/add_to_cart.js"></script>
 </body>
+
 </html>

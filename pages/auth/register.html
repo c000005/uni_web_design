@@ -1,116 +1,127 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ثبت‌نام | GameHub</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body class="farq">
 
-<header class="header">
+<body>
+
+  <header class="header">
     <nav class="nav-bar">
-        <a href="../main/index.html" class="logo">
-            <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
-        </a>
-        <a href="../main/index.html">خانه</a>
-        <a href="../main/games.html">بازی‌ها</a>
-        <a href="../main/team.html">تیم ما</a>
-        <a href="../auth/login.html">ورود</a>
+      <a href="../main/index.html" class="logo">
+        <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
+      </a>
+
+      <a href="../main/index.html">خانه</a>
+      <a href="../main/games.html">بازی‌ها</a>
+      <a href="../main/team.html">تیم ما</a>
+      <a href="login.html">ورود</a>
+      <a href="../main/settings.html">تنظیمات</a>
+      <div>
+        <span id="cart_image">🛒</span>
+        <span id="cart_badge" class="badge large">
+          0
+        </span>
+      </div>
     </nav>
-</header>
+  </header>
 
 
-<main class="container">
-  <h1 id="reg-title">ثبت‌نام</h1>
+  <main class="container">
+    <h1 id="reg-title">ثبت‌نام</h1>
 
-  <form id="registerForm" action="/auth/register" method="post" novalidate>
-    <div>
-      <label for="fullname">نام و نام خانوادگی</label>
-      <input id="fullname" name="fullname" type="text" required maxlength="100" autocomplete="name">
-      <div class="error" id="fullnameError" aria-live="polite"></div>
-    </div>
+    <form id="registerForm" action="/auth/register" method="post" novalidate>
+      <div>
+        <label for="fullname">نام و نام خانوادگی</label>
+        <input id="fullname" name="fullname" type="text" required maxlength="100" autocomplete="name">
+        <div class="error" id="fullnameError" aria-live="polite"></div>
+      </div>
 
-    <div>
-      <label for="username">نام کاربری</label>
-      <input id="username" name="username" type="text" required pattern="[A-Za-z0-9_\-]{3,30}" title="3 تا 30 کاراکتر، فقط حروف لاتین، عدد، زیرخط یا -">
-      <div class="error" id="usernameError" aria-live="polite"></div>
-    </div>
+      <div>
+        <label for="username">نام کاربری</label>
+        <input id="username" name="username" type="text" required pattern="[A-Za-z0-9_\-]{3,30}"
+          title="3 تا 30 کاراکتر، فقط حروف لاتین، عدد، زیرخط یا -">
+        <div class="error" id="usernameError" aria-live="polite"></div>
+      </div>
 
-    <div>
-      <label for="email">ایمیل</label>
-      <input id="email" name="email" type="email" required autocomplete="email">
-      <div class="error" id="emailError" aria-live="polite"></div>
-    </div>
+      <div>
+        <label for="email">ایمیل</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+        <div class="error" id="emailError" aria-live="polite"></div>
+      </div>
 
-    <div>
-      <label for="password">رمز عبور</label>
-      <input id="password" name="password" type="password" required minlength="8" autocomplete="new-password">
-      <div class="error" id="passwordError" aria-live="polite"></div>
-    </div>
+      <div>
+        <label for="password">رمز عبور</label>
+        <input id="password" name="password" type="password" required minlength="8" autocomplete="new-password">
+        <div class="error" id="passwordError" aria-live="polite"></div>
+      </div>
 
-    <div>
-      <label for="password2">تکرار رمز عبور</label>
-      <input id="password2" name="password2" type="password" required minlength="8" autocomplete="new-password">
-      <div class="error" id="password2Error" aria-live="polite"></div>
-    </div>
+      <div>
+        <label for="password2">تکرار رمز عبور</label>
+        <input id="password2" name="password2" type="password" required minlength="8" autocomplete="new-password">
+        <div class="error" id="password2Error" aria-live="polite"></div>
+      </div>
 
-    <div>
-      <label for="role">نقش (اختیاری)</label>
-      <select id="role" name="role">
-        <option value="user" selected>کاربر</option>
-        <option value="contributor">همکار</option>
-      </select>
-    </div>
+      <div>
+        <label for="role">نقش (اختیاری)</label>
+        <select id="role" name="role">
+          <option value="user" selected>کاربر</option>
+          <option value="contributor">همکار</option>
+        </select>
+      </div>
 
-    <button type="submit" class="btn btn-primary">ثبت‌نام</button>
-  </form>
+      <button type="submit" class="btn btn-primary">ثبت‌نام</button>
+    </form>
 
-  <p class="small">قبلا ثبت‌نام کرده‌اید؟ <a href="login.html">ورود</a></p>
-</main>
+    <p class="small">قبلا ثبت‌نام کرده‌اید؟ <a href="login.html">ورود</a></p>
+  </main>
 
-<script src="../../assets/js/form-validation.js"></script>
-<script>
+  <footer>
+    <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
+  </footer>
+
+  <script src="../../assets/js/form_validation.js"></script>
+  <script>
     document.getElementById("registerForm").addEventListener("submit", function (e) {
-        let isValid = true;
+      let isValid = true;
 
-        const fullname = document.getElementById("fullname");
-        const email = document.getElementById("email");
-        const password = document.getElementById("password");
-        const password2 = document.getElementById("password2");
+      const fullname = document.getElementById("fullname");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const password2 = document.getElementById("password2");
 
-        // پاک‌سازی خطاها
-        [fullname, email, password, password2].forEach(clearError);
+      [fullname, email, password, password2].forEach(clearError);
 
-        // نام و نام خانوادگی (حداقل ۳ کاراکتر)
-        if (fullname.value.trim().length < 3) {
-            showError(fullname, "نام و نام خانوادگی باید حداقل ۳ کاراکتر باشد");
-            isValid = false;
-        }
+      if (fullname.value.trim().length < 3) {
+        showError(fullname, "نام و نام خانوادگی باید حداقل ۳ کاراکتر باشد");
+        isValid = false;
+      }
 
-        // ایمیل
-        if (!isValidEmail(email.value)) {
-            showError(email, "ایمیل وارد شده معتبر نیست");
-            isValid = false;
-        }
+      if (!isValidEmail(email.value)) {
+        showError(email, "ایمیل وارد شده معتبر نیست");
+        isValid = false;
+      }
 
-        // رمز عبور
-        if (password.value.length < 8) {
-            showError(password, "رمز عبور باید حداقل ۸ کاراکتر باشد");
-            isValid = false;
-        }
+      if (password.value.length < 8) {
+        showError(password, "رمز عبور باید حداقل ۸ کاراکتر باشد");
+        isValid = false;
+      }
 
-        // تکرار رمز عبور
-        if (password.value !== password2.value) {
-            showError(password2, "رمز عبور و تکرار آن یکسان نیست");
-            isValid = false;
-        }
+      if (password.value !== password2.value) {
+        showError(password2, "رمز عبور و تکرار آن یکسان نیست");
+        isValid = false;
+      }
 
-        if (!isValid) {
-            e.preventDefault();
-        }
+      if (!isValid) {
+        e.preventDefault();
+      }
     });
-</script>
+  </script>
 
 </body>
+
 </html>

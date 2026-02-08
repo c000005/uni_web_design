@@ -1,0 +1,32 @@
+@import url('../color/dark.css');
+
+.m3-text-field {
+    position: relative;
+    width: 100%;
+}
+
+.m3-text-field input,
+.m3-text-field textarea {
+    width: 100%;
+    padding: 14px 12px;
+
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline);
+    background-color: transparent;
+
+    color: var(--md-sys-color-on-surface);
+    font-size: 1rem;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.m3-text-field:focus,
+.m3-text-field textarea:focus {
+    outline: none;
+    border-color: var(--md-sys-color-primary);
+    box-shadow: 0 0 0 1px var(--md-sys-color-primary);
+}
+
+.m3-text-field input:disabled {
+    opacity: 0.38;
+}
