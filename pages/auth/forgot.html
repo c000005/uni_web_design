@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>فراموشی رمز عبور | GameHub</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/m3/m3_btn.css">
 </head>
 
 <body>
@@ -32,16 +33,16 @@
 
 
     <main class="container">
-        <h1 id="forgot-title">فراموشی رمز عبور</h1>
+        <h1 id="forgot_title">فراموشی رمز عبور</h1>
         <p class="small">ایمیل خود را وارد کنید تا لینک یا کد بازیابی رمز برای شما ارسال شود.</p>
 
-        <form action="/auth/forgot-password" method="post" id="forgotForm" novalidate>
+        <form action="otp.html" method="post" id="forgot_form" novalidate>
             <div>
                 <label for="email">ایمیل</label>
                 <input id="email" name="email" type="email" required autocomplete="email">
-                <div class="error" id="emailError" aria-live="polite"></div>
+                <div class="error" id="email_error" aria-live="polite"></div>
             </div>
-            <button type="submit" class="btn btn-primary">ارسال لینک بازیابی</button>
+            <button type="submit" class="m3-btn filled">ارسال لینک بازیابی</button>
         </form>
 
         <p class="small"><a href="login.html">بازگشت به ورود</a></p>
@@ -52,17 +53,6 @@
     </footer>
 
     <script src="../../assets/js/form_validation.js"></script>
-    <script>
-        document.getElementById("forgotForm").addEventListener("submit", function (e) {
-            const email = document.getElementById("email");
-            clearError(email);
-
-            if (!isValidEmail(email.value)) {
-                showError(email, "ایمیل وارد شده معتبر نیست");
-                e.preventDefault();
-            }
-        });
-    </script>
 
 </body>
 

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ثبت‌نام | GameHub</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/m3/m3_btn.css">
 </head>
 
 <body>
@@ -32,38 +33,38 @@
 
 
   <main class="container">
-    <h1 id="reg-title">ثبت‌نام</h1>
+    <h1>ثبت‌نام</h1>
 
-    <form id="registerForm" action="/auth/register" method="post" novalidate>
+    <form id="register_form" action="login.html" method="post" novalidate>
       <div>
         <label for="fullname">نام و نام خانوادگی</label>
         <input id="fullname" name="fullname" type="text" required maxlength="100" autocomplete="name">
-        <div class="error" id="fullnameError" aria-live="polite"></div>
+        <div class="error" id="fullname_error" aria-live="polite"></div>
       </div>
 
       <div>
         <label for="username">نام کاربری</label>
         <input id="username" name="username" type="text" required pattern="[A-Za-z0-9_\-]{3,30}"
           title="3 تا 30 کاراکتر، فقط حروف لاتین، عدد، زیرخط یا -">
-        <div class="error" id="usernameError" aria-live="polite"></div>
+        <div class="error" id="username_error" aria-live="polite"></div>
       </div>
 
       <div>
         <label for="email">ایمیل</label>
         <input id="email" name="email" type="email" required autocomplete="email">
-        <div class="error" id="emailError" aria-live="polite"></div>
+        <div class="error" id="email_error" aria-live="polite"></div>
       </div>
 
       <div>
         <label for="password">رمز عبور</label>
         <input id="password" name="password" type="password" required minlength="8" autocomplete="new-password">
-        <div class="error" id="passwordError" aria-live="polite"></div>
+        <div class="error" id="password_error" aria-live="polite"></div>
       </div>
 
       <div>
         <label for="password2">تکرار رمز عبور</label>
         <input id="password2" name="password2" type="password" required minlength="8" autocomplete="new-password">
-        <div class="error" id="password2Error" aria-live="polite"></div>
+        <div class="error" id="password2_error" aria-live="polite"></div>
       </div>
 
       <div>
@@ -74,7 +75,7 @@
         </select>
       </div>
 
-      <button type="submit" class="btn btn-primary">ثبت‌نام</button>
+      <button type="submit" class="m3-btn filled">ثبت‌نام</button>
     </form>
 
     <p class="small">قبلا ثبت‌نام کرده‌اید؟ <a href="login.html">ورود</a></p>
@@ -85,42 +86,6 @@
   </footer>
 
   <script src="../../assets/js/form_validation.js"></script>
-  <script>
-    document.getElementById("registerForm").addEventListener("submit", function (e) {
-      let isValid = true;
-
-      const fullname = document.getElementById("fullname");
-      const email = document.getElementById("email");
-      const password = document.getElementById("password");
-      const password2 = document.getElementById("password2");
-
-      [fullname, email, password, password2].forEach(clearError);
-
-      if (fullname.value.trim().length < 3) {
-        showError(fullname, "نام و نام خانوادگی باید حداقل ۳ کاراکتر باشد");
-        isValid = false;
-      }
-
-      if (!isValidEmail(email.value)) {
-        showError(email, "ایمیل وارد شده معتبر نیست");
-        isValid = false;
-      }
-
-      if (password.value.length < 8) {
-        showError(password, "رمز عبور باید حداقل ۸ کاراکتر باشد");
-        isValid = false;
-      }
-
-      if (password.value !== password2.value) {
-        showError(password2, "رمز عبور و تکرار آن یکسان نیست");
-        isValid = false;
-      }
-
-      if (!isValid) {
-        e.preventDefault();
-      }
-    });
-  </script>
 
 </body>
 

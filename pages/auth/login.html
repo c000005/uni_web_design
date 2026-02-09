@@ -2,91 +2,69 @@
 <html lang="fa" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ورود | GameHub</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود | GameHub</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/m3/m3_btn.css">
 </head>
 
 <body>
 
-  <header class="header">
+<header class="header">
     <nav class="nav-bar">
-      <a href="../main/index.html" class="logo">
-        <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
-      </a>
+        <a href="../main/index.html" class="logo">
+            <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
+        </a>
 
-      <a href="../main/index.html">خانه</a>
-      <a href="../main/games.html">بازی‌ها</a>
-      <a href="../main/team.html">تیم ما</a>
-      <a href="login.html" class="active">ورود</a>
-      <a href="../main/settings.html">تنظیمات</a>
-      <div>
-        <span id="cart_image">🛒</span>
-        <span id="cart_badge" class="badge large">
+        <a href="../main/index.html">خانه</a>
+        <a href="../main/games.html">بازی‌ها</a>
+        <a href="../main/team.html">تیم ما</a>
+        <a href="login.html" class="active">ورود</a>
+        <a href="../main/settings.html">تنظیمات</a>
+        <div>
+            <span id="cart_image">🛒</span>
+            <span id="cart_badge" class="badge large">
           0
         </span>
-      </div>
+        </div>
     </nav>
-  </header>
+</header>
 
 
-  <main class="container">
-    <h1 id="login-title">ورود به حساب</h1>
+<main class="container">
+    <h1>ورود به حساب</h1>
     <p class="small">با حساب کاربری خود وارد شوید تا بتوانید بازی‌ها را دانلود کنید.</p>
 
-    <form id="loginForm" action="/auth/login" method="post" novalidate>
-      <div>
-        <label for="email">ایمیل</label>
-        <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
-        <div class="error" id="emailError" aria-live="polite"></div>
-      </div>
+    <form id="login_form" action="../main/index.html" method="post" novalidate>
+        <div>
+            <label for="email">ایمیل</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+            <div class="error" id="email_error" aria-live="polite"></div>
+        </div>
 
-      <div>
-        <label for="password">رمز عبور</label>
-        <input id="password" name="password" type="password" required minlength="8" placeholder="رمز عبور"
-          autocomplete="current-password">
-        <div class="error" id="passwordError" aria-live="polite"></div>
-      </div>
+        <div>
+            <label for="password">رمز عبور</label>
+            <input id="password" name="password" type="password" required minlength="8" placeholder="رمز عبور"
+                   autocomplete="current-password">
+            <div class="error" id="password_error" aria-live="polite"></div>
+        </div>
 
-      <div class="text-right">
-        <a href="forgot.html">رمز عبور را فراموش کرده‌اید؟</a>
-      </div>
+        <div class="text-right">
+            <a href="forgot.html">رمز عبور را فراموش کرده‌اید؟</a>
+        </div>
 
-      <button type="submit" class="btn btn-primary">ورود</button>
+        <button type="submit" class="m3-btn filled">ورود</button>
     </form>
 
     <p class="small">حساب ندارید؟ <a href="register.html">ثبت‌نام</a></p>
-  </main>
+</main>
 
-  <footer>
+<footer>
     <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
-  </footer>
+</footer>
 
-  <script src="../../assets/js/form_validation.js"></script>
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
-      let isValid = true;
-
-      const email = document.getElementById("email");
-      const password = document.getElementById("password");
-
-      clearError(email);
-      clearError(password);
-
-      if (!isValidEmail(email.value)) {
-        showError(email, "ایمیل معتبر وارد کنید");
-        isValid = false;
-      }
-
-      if (password.value.length < 8) {
-        showError(password, "رمز عبور حداقل ۸ کاراکتر است");
-        isValid = false;
-      }
-
-      if (!isValid) e.preventDefault();
-    });
-  </script>
+<script src="../../assets/js/form_validation.js"></script>
 
 </body>
 

@@ -5,60 +5,77 @@
     <meta charset="UTF-8">
     <title>لیست کاربران | پنل ادمین</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/m3/m3_table.css">
+    <link rel="stylesheet" href="../../assets/css/m3/m3_btn.css">
 </head>
 
 <body>
 
-    <main class="container">
-        <h1>لیست کاربران</h1>
-
-        <div class="m3-table-wrapper">
-            <table class="m3-table">
-                <thead>
-                    <tr>
-                        <th>آواتار</th>
-                        <th>نام</th>
-                        <th>ایمیل</th>
-                        <th>نقش</th>
-                        <th>وضعیت</th>
-                        <th>تاریخ عضویت</th>
-                        <th>عملیات</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="../../assets/images/profile.jpg" class="table-thumb"></td>
-                        <td>علی رضایی</td>
-                        <td>ali@gmail.com</td>
-                        <td>کاربر</td>
-                        <td><span class="badge success">فعال</span></td>
-                        <td>1403/07/12</td>
-                        <td>
-                            <button class="m3-btn small outlined">ویرایش</button>
-                            <button class="m3-btn small text">حذف</button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><img src="../../assets/images/profile.jpg" class="table-thumb"></td>
-                        <td>مینا احمدی</td>
-                        <td>mina@yahoo.com</td>
-                        <td>ادمین</td>
-                        <td><span class="badge warning">معلق</span></td>
-                        <td>1403/05/01</td>
-                        <td>
-                            <button class="m3-btn small outlined">ویرایش</button>
-                            <button class="m3-btn small text">حذف</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+<header class="header">
+    <nav class="nav-bar">
+        <a href="../main/index.html" class="logo">
+            <img src="../../assets/images/logo.png" class="logo-img" alt="GameHub Logo">
+        </a>
+        <a href="../main/index.html">خانه</a>
+        <a href="../main/games.html">بازی‌ها</a>
+        <a href="../main/team.html">تیم ما</a>
+        <a href="../auth/login.html">ورود</a>
+        <a href="../main/settings.html">تنظیمات</a>
+        <div>
+            <span id="cart_image">🛒</span>
+            <span id="cart_badge" class="badge large">0</span>
         </div>
-    </main>
+    </nav>
+</header>
+<main class="container">
+    <h1>لیست کاربران</h1>
+    <div class="m3-table-wrapper">
+        <table class="m3-table">
+            <thead>
+            <tr>
+                <th>آواتار</th>
+                <th>نام</th>
+                <th>ایمیل</th>
+                <th>نقش</th>
+                <th>وضعیت</th>
+                <th>تاریخ عضویت</th>
+                <th>عملیات</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="../../assets/images/profile.png" class="table-thumb"></td>
+                <td>علی رضایی</td>
+                <td>ali@gmail.com</td>
+                <td>کاربر</td>
+                <td><span class="badge success">فعال</span></td>
+                <td>1403/07/12</td>
+                <td>
+                    <button class="m3-btn small filled">ویرایش</button>
+                    <button class="m3-btn small text">حذف</button>
+                </td>
+            </tr>
 
-    <footer>
-        <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
-    </footer>
+            <tr>
+                <td><img src="../../assets/images/profile.png" class="table-thumb"></td>
+                <td>مینا احمدی</td>
+                <td>mina@yahoo.com</td>
+                <td>ادمین</td>
+                <td><span class="badge warning">معلق</span></td>
+                <td>1403/05/01</td>
+                <td>
+                    <button class="m3-btn small filled">ویرایش</button>
+                    <button class="m3-btn small text">حذف</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 GameHub — تمامی حقوق محفوظ است.</p>
+</footer>
 
 </body>
 

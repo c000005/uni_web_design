@@ -7,6 +7,7 @@
     <title>تماس با ما | GameHub</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/m3/m3_btn.css">
+    <link rel="stylesheet" href="../../assets/css/m3/m3_card.css">
     <link rel="stylesheet" href="../../assets/css/m3/m3_textfield.css">
 </head>
 
@@ -30,40 +31,40 @@
 </header>
 
 
-<main class="container">
+<main class="m3-card">
     <h1>تماس با ما</h1>
     <p class="small">اگر پرسشی دارید یا نیاز به پشتیبانی دارید، فرم زیر را پر کنید. تیم ما در سریع‌ترین زمان پاسخ خواهد
         داد.</p>
 
-    <form id="contact_form" action="#" method="post">
+    <form id="contact_form" action="index.html" method="post" novalidate>
         <div>
             <label for="name">نام:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name">
             <div id="name_error" class="error"></div>
         </div>
 
         <div>
             <label for="email">ایمیل:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email">
             <div id="email_error" class="error"></div>
         </div>
 
         <div>
             <label for="subject">موضوع:</label>
-            <input type="text" id="subject" name="subject" placeholder="مثلاً: مشکل در دانلود بازی" required>
+            <input type="text" id="subject" name="subject" placeholder="مثلاً: مشکل در دانلود بازی">
             <div id="subject_error" class="error"></div>
         </div>
 
         <div>
             <label for="message">پیام شما:</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="6"></textarea>
             <div id="message_error" class="error"></div>
         </div>
 
         <button type="submit" class="m3-btn filled medium">ارسال پیام</button>
     </form>
 
-    <section>
+    <section class="m3-card">
         <h3>اطلاعات تماس</h3>
         <p class="small">ایمیل: support@gamehub.ir</p>
         <p class="small">شماره تماس: 09134567890</p>
