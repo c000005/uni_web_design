@@ -31,6 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 clear_error(email_input);
             }
 
+            if (!subject_input.value.trim()) {
+                show_error(subject_input, 'لطفا موضوع خود را وارد کنید');
+                isValid = false;
+            } else if (!isValidEmail(subject_input.value.trim())) {
+                show_error(subject_input, 'لطفا یک موضوع معتبر وارد کنید');
+                isValid = false;
+            } else {
+                clear_error(subject_input);
+            }
+
             if (!message_input.value.trim()) {
                 show_error(message_input, 'لطفا پیام خود را وارد کنید');
                 isValid = false;
@@ -150,6 +160,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 otp.focus();
             }
         }
+    } else if (document.getElementById('reset_form')) {
+        document.getElementById("reset_form").addEventListener("submit", function (e) {
+            let isValid = true;
+
+            const password = document.getElementById("password");
+            const password2 = document.getElementById("password2");
+
+            [password, password2].forEach(clear_error);
+
+            if (password.value.length < 8) {
+                show_error(password, "رمز عبور باید حداقل ۸ کاراکتر باشد");
+                isValid = false;
+            }
+
+            if (password.value !== password2.value) {
+                show_error(password2, "رمز عبور و تکرار آن یکسان نیست");
+                isValid = false;
+            }
+
+            if (!isValid) {
+                e.preventDefault();
+            }
+        });
     }
 });
 
