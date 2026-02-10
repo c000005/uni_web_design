@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 show_error(name_input, 'نام باید حداقل 2 کاراکتر باشد');
                 isValid = false;
             } else {
-                clearError(name_input);
+                clear_error(name_input);
             }
 
             if (!email_input.value.trim()) {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 show_error(email_input, 'لطفا یک ایمیل معتبر وارد کنید');
                 isValid = false;
             } else {
-                clearError(email_input);
+                clear_error(email_input);
             }
 
             if (!message_input.value.trim()) {
@@ -38,17 +38,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 show_error(message_input, 'پیام باید حداقل 10 کاراکتر باشد');
                 isValid = false;
             } else {
-                clearError(message_input);
+                clear_error(message_input);
             }
 
             if (isValid) {
                 alert('پیام شما با موفقیت ارسال شد!');
                 document.getElementById('contact_form').reset();
 
-                clearError(name_input);
-                clearError(email_input);
-                clearError(subject_input);
-                clearError(message_input);
+                clear_error(name_input);
+                clear_error(email_input);
+                clear_error(subject_input);
+                clear_error(message_input);
             }
         });
 
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             input.addEventListener('input', function () {
-                clearError(this);
+                clear_error(this);
             });
         });
 
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (document.getElementById('forgot_form')) {
         document.getElementById("forgot_form").addEventListener("submit", function (e) {
             const email = document.getElementById("email");
-            clearError(email);
+            clear_error(email);
 
             if (!isValidEmail(email.value)) {
                 show_error(email, "ایمیل وارد شده معتبر نیست");
@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const email = document.getElementById("email");
             const password = document.getElementById("password");
 
-            clearError(email);
-            clearError(password);
+            clear_error(email);
+            clear_error(password);
 
             if (!isValidEmail(email.value)) {
                 show_error(email, "ایمیل معتبر وارد کنید");
@@ -101,14 +101,20 @@ document.addEventListener('DOMContentLoaded', function () {
             let isValid = true;
 
             const fullname = document.getElementById("fullname");
+            const username = document.getElementById("username");
             const email = document.getElementById("email");
             const password = document.getElementById("password");
             const password2 = document.getElementById("password2");
 
-            [fullname, email, password, password2].forEach(clearError);
+            [fullname, email, password, password2].forEach(clear_error);
 
             if (fullname.value.trim().length < 3) {
                 show_error(fullname, "نام و نام خانوادگی باید حداقل ۳ کاراکتر باشد");
+                isValid = false;
+            }
+
+            if (username.value.trim().length < 3) {
+                show_error(username, "نام کاربری باید حداقل ۳ کاراکتر باشد");
                 isValid = false;
             }
 
@@ -131,10 +137,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 e.preventDefault();
             }
         });
+    } else if (document.getElementById('otp_form')) {
+        if (document.querySelector("input[name='otp1']")) {
+            let otp = document.querySelector("input[name='otp6']");
+            console.log(otp.name.split("otp"));
+            otp.onkeyup = function focus_on_next () {
+                otp = document.querySelector(`input[name='otp${parseInt(otp.name.split("otp")[1]) - 1}']`);
+                if (!otp) {
+                    document.getElementById("otp_button").click();
+                }
+                otp.onkeyup = focus_on_next;
+                otp.focus();
+            }
+        }
     }
 });
 
-function clearError(input) {
+function clear_error(input) {
     const errorDiv = document.getElementById(input.id + "_error");
     input.classList.remove("invalid");
     if (errorDiv) {
@@ -158,7 +177,7 @@ function validateField(input) {
             } else if (input.value.trim().length < 2) {
                 show_error(input, 'نام باید حداقل 2 کاراکتر باشد');
             } else {
-                clearError(input);
+                clear_error(input);
             }
             break;
 
@@ -168,7 +187,7 @@ function validateField(input) {
             } else if (!isValidEmail(input.value.trim())) {
                 show_error(input, 'لطفا یک ایمیل معتبر وارد کنید');
             } else {
-                clearError(input);
+                clear_error(input);
             }
             break;
 
@@ -178,7 +197,7 @@ function validateField(input) {
             } else if (input.value.trim().length < 10) {
                 show_error(input, 'پیام باید حداقل 10 کاراکتر باشد');
             } else {
-                clearError(input);
+                clear_error(input);
             }
             break;
     }
@@ -189,26 +208,5 @@ function show_error(input, message) {
     input.classList.add("invalid");
     if (errorDiv) {
         errorDiv.textContent = message;
-    }
-}
-
-function go_to_next_input() {
-
-    const otp = document.querySelector("input[name='otp1']");
-    otp.onkeyup = function () {
-        document.querySelector(`input[name='otp${otp.name.split("otp")[1] + 1}']`).focus();
-    }
-}
-
-if (document.querySelector("input[name='otp1']")) {
-    let otp = document.querySelector("input[name='otp6']");
-    console.log(otp.name.split("otp"));
-    otp.onkeyup = function focus_on_next () {
-        otp = document.querySelector(`input[name='otp${parseInt(otp.name.split("otp")[1]) - 1}']`);
-        if (!otp) {
-            document.getElementById("otp_button").click();
-        }
-        otp.onkeyup = focus_on_next;
-        otp.focus();
     }
 }
